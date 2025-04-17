@@ -1,0 +1,7 @@
+myenv
+data
+.env
+__pycache__
+app.ipynb
+app-v1.py
+app-v2.py
