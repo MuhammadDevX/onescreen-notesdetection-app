@@ -44,7 +44,7 @@ def load_hf_model():
     return processor, model
 
 
-def detect_notes_hf(image_bytes, text_prompt="text. graph. handwriting. charts. drawings. diagrams. sketches. figures. images. equations. plane. geometry. notes. plots. flowcharts."):
+def detect_notes_hf(image_bytes, text_prompt="text. graph. handwriting. charts. drawings. diagrams. sketches. figures. plane. geometry. notes. plots."):
     """Run HF Grounding DINO detection with debug output"""
     processor, model = load_hf_model()
     image = Image.open(io.BytesIO(image_bytes)).convert("RGB")
