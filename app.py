@@ -61,7 +61,7 @@ def detect_notes_hf(image_bytes, text_prompt = "flowchart. mind map. Venn diagra
     results = processor.post_process_grounded_object_detection(
         outputs, 
         inputs.input_ids, 
-        box_threshold=0.26,
+        box_threshold=0.25,
         text_threshold=0.10,
         target_sizes=target_sizes
     )[0]
