@@ -44,7 +44,7 @@ def load_hf_model():
     return processor, model
 
 
-def detect_notes_hf(image_bytes, text_prompt="text. graph. handwriting. charts. drawings. diagrams. sketches. figures. plane. geometry. notes. plots."):
+def detect_notes_hf(image_bytes, text_prompt = "flowchart. mind map. Venn diagram. network diagram. UML diagram. ER diagram. Gantt chart. organizational chart. schematic diagram."):
     """Run HF Grounding DINO detection with debug output"""
     processor, model = load_hf_model()
     image = Image.open(io.BytesIO(image_bytes)).convert("RGB")
@@ -61,8 +61,8 @@ def detect_notes_hf(image_bytes, text_prompt="text. graph. handwriting. charts. 
     results = processor.post_process_grounded_object_detection(
         outputs, 
         inputs.input_ids, 
-        box_threshold=0.3,
-        text_threshold=0.25,
+        box_threshold=0.26,
+        text_threshold=0.10,
         target_sizes=target_sizes
     )[0]
     
