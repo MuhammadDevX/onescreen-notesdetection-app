@@ -151,7 +151,7 @@ def merge_boxes(boxes):
 
 # --- Streamlit App ---
 def main():
-    st.title("📝 Cloud-Based Note Processor")
+    st.title("📝 OneScreen Cloud-Based Note Processor")
     st.markdown("""
     Uses:
     - GPT-4o-mini (API) for classification
